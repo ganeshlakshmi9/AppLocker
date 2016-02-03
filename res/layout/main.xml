@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical" android:background = "@drawable/lockbg"
+		android:layout_gravity="center_vertical" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<TextView android:text="Application is locked by admin"
+			style="@style/titlegold" android:textColor="#e30000"
+			android:layout_gravity="center_vertical" android:id="@+id/textView1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<TextView android:layout_height="wrap_content"
+					android:text="Enter Password*" android:layout_width="wrap_content"
+					android:id="@+id/textView1" ></TextView>
+
+				<EditText android:id="@+id/passwordField1" android:password="true"
+					android:inputType="number" android:layout_width="fill_parent"
+					android:enabled="true" android:layout_height="wrap_content"
+					android:layout_below="@+id/textView1" android:singleLine="true"
+					android:maxLength="50"></EditText>
+				
+
+				<Button
+				    android:id="@+id/submitButton1"
+				    android:layout_width="120dp"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="4dp"
+				    android:background="@drawable/buttonbg"
+				    android:text="Submit" />
+
+	</LinearLayout>
+</LinearLayout>

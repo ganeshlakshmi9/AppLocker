@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package com.iridium.AppLock;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.Window;
+
+/**
+ * @author rajapeela
+ * 
+ */
+public class NewActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+
+		setContentView(R.layout.main);
+
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,
+				R.layout.window_title);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+			// finish();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:layout_gravity="center_vertical" android:padding="10dp"
+	android:gravity="center_vertical" android:background="@drawable/lockbg">
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:padding="10dp">
+
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:id="@+id/enterFields">
+				<TextView android:layout_height="wrap_content"
+					android:text="Enter Password*" android:layout_width="fill_parent"
+					android:id="@+id/textView1" android:layout_alignLeft="@+id/passwordField"></TextView>
+
+				<EditText android:id="@+id/passwordField" android:password="true"
+					android:inputType="number" android:layout_width="fill_parent"
+					android:enabled="true" android:layout_height="wrap_content"
+					android:layout_below="@+id/textView1" android:singleLine="true"
+					android:maxLength="50"></EditText>
+			</RelativeLayout>
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_below="@+id/enterFields" android:layout_height="wrap_content"
+				android:id="@+id/reenterFields">
+				<TextView android:layout_height="wrap_content"
+					android:text="Re-Enter Password*" android:layout_width="fill_parent"
+					android:id="@+id/textView2" android:layout_below="@+id/passwordField"></TextView>
+
+				<EditText android:layout_height="wrap_content"
+					android:password="true" android:layout_below="@+id/textView2"
+					android:id="@+id/editText1" android:layout_width="fill_parent"
+					android:layout_alignLeft="@+id/passwordField" android:inputType="number"
+					android:layout_alignRight="@+id/passwordField" android:singleLine="true"
+					android:maxLength="50"></EditText>
+				<TextView android:layout_height="wrap_content"
+					android:layout_below="@+id/editText1" android:text=""
+					android:layout_width="wrap_content" android:id="@+id/passWordMatch"
+					android:layout_alignRight="@+id/editText1"
+					android:layout_marginBottom="10dp"></TextView>
+			</RelativeLayout>
+
+			<Button android:text="Cancel" android:layout_height="wrap_content"
+				android:id="@+id/cancleButton" android:layout_width="120dp"
+				android:layout_below="@+id/reenterFields" android:layout_marginTop="4dp"
+				android:layout_alignParentRight="true" android:background="@drawable/buttonbg"></Button>
+			<Button android:text="Submit" android:layout_height="wrap_content"
+				android:background="@drawable/buttonbg" android:layout_marginTop="4dp"
+				android:id="@+id/submitButton" android:layout_width="120dp"
+				android:layout_below="@+id/reenterFields"></Button>
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>
